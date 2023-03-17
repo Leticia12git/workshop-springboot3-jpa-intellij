@@ -10,6 +10,9 @@ import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -29,6 +32,6 @@ public class Order implements Serializable {
     @JoinColumn(name = "client_id")
     private User client;
     private Integer orderStatus;
-
-
+    @OneToMany(mappedBy = "id.order")
+    private Set<OrderItem> items = new HashSet<>();
 }
