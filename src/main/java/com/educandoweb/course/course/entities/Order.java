@@ -8,13 +8,14 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serial;
+import java.io.Serializable;
 import java.time.Instant;
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tb_order")
-public class Order {
+public class Order implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
