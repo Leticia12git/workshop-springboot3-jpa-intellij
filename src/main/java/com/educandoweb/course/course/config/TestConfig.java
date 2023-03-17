@@ -4,12 +4,13 @@ import com.educandoweb.course.course.entities.Category;
 import com.educandoweb.course.course.entities.Order;
 import com.educandoweb.course.course.entities.Product;
 import com.educandoweb.course.course.entities.User;
-import com.educandoweb.course.course.enumeration.OrderStatus;
+import com.educandoweb.course.course.entities.enums.OrderStatus;
 import com.educandoweb.course.course.repository.CategoryRepository;
 import com.educandoweb.course.course.repository.OrderRepository;
 import com.educandoweb.course.course.repository.ProductRepository;
 import com.educandoweb.course.course.repository.UserRepository;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +20,7 @@ import java.time.Instant;
 import java.util.Arrays;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Configuration
 @Profile("test")
 public class TestConfig implements CommandLineRunner {

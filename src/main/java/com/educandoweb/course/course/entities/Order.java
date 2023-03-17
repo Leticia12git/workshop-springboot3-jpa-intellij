@@ -1,6 +1,6 @@
 package com.educandoweb.course.course.entities;
 
-import com.educandoweb.course.course.enumeration.OrderStatus;
+import com.educandoweb.course.course.entities.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,7 +27,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "client_id")
     private User client;
-    private OrderStatus orderStatus;
+    private Integer orderStatus;
 
 
 }
