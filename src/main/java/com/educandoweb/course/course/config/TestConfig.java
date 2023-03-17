@@ -4,6 +4,7 @@ import com.educandoweb.course.course.entities.Category;
 import com.educandoweb.course.course.entities.Order;
 import com.educandoweb.course.course.entities.Product;
 import com.educandoweb.course.course.entities.User;
+import com.educandoweb.course.course.enumeration.OrderStatus;
 import com.educandoweb.course.course.repository.CategoryRepository;
 import com.educandoweb.course.course.repository.OrderRepository;
 import com.educandoweb.course.course.repository.ProductRepository;
