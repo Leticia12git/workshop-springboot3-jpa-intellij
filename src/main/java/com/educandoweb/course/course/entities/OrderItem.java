@@ -13,7 +13,6 @@ import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
-@JsonIgnore
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

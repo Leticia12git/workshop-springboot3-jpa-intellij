@@ -44,9 +44,9 @@ public class UserResource {
         return ResponseEntity.ok().body(obj);
     }
 
-    @PostMapping()
-    public ResponseEntity<User> delete(@RequestBody User obj){
-        obj = userService.insert(obj);
-        return ResponseEntity.ok().body(obj);
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id){
+        userService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
