@@ -27,5 +27,10 @@ public class Product implements Serializable {
     private Double price;
     private String imgUrl;
 
+    @OneToMany(mappedBy = "id.product")
+    private Set<OrderItem> items = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "tb_product_category", joinColumns = @JoinColumn(name = "product_"))
     private Set<Category> categories = new HashSet<>();
 }
