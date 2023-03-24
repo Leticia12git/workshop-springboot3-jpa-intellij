@@ -4,15 +4,26 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import java.time.LocalDateTime;
+import javax.persistence.*;
+import java.io.Serial;
+import java.io.Serializable;
+import java.time.Instant;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment {
+public class Payment  implements Serializable {
 
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private LocalDateTime date;
+    private Instant date;
+
+    @OneToOne
+    @MapsId
+    private Order order;
 }
