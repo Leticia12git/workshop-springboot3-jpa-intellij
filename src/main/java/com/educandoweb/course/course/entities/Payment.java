@@ -1,5 +1,6 @@
 package com.educandoweb.course.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import java.time.Instant;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment  implements Serializable {
+public class Payment implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -23,6 +24,7 @@ public class Payment  implements Serializable {
     private long id;
     private Instant date;
 
+    @JsonIgnore
     @OneToOne
     @MapsId
     private Order order;
