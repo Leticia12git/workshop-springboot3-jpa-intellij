@@ -39,8 +39,8 @@ public class UserResource {
     }
 
     @PostMapping()
-    public ResponseEntity<User> update(@RequestBody User obj){
-        obj = userService.insert(obj);
+    public ResponseEntity<User> update(@PathVariable Long id,@RequestBody User obj){
+        obj = userService.update(id,obj);
         return ResponseEntity.ok().body(obj);
     }
 
