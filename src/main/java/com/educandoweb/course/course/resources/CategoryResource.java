@@ -17,7 +17,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/category")
-@AllArgsConstructor
 public class CategoryResource {
 
     @Autowired

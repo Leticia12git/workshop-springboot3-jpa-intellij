@@ -2,9 +2,7 @@ package com.educandoweb.course.course.resources;
 
 import com.educandoweb.course.course.entities.User;
 import com.educandoweb.course.course.services.UserService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -14,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/users")
-@AllArgsConstructor
 public class UserResource {
 
     @Autowired
@@ -38,7 +35,7 @@ public class UserResource {
         return ResponseEntity.created(uri).body(obj);
     }
 
-    @PostMapping()
+    @PutMapping()
     public ResponseEntity<User> update(@PathVariable Long id,@RequestBody User obj){
         obj = userService.update(id,obj);
         return ResponseEntity.ok().body(obj);

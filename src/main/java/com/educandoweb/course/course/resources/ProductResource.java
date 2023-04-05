@@ -3,7 +3,6 @@ package com.educandoweb.course.course.resources;
 
 import com.educandoweb.course.course.entities.Product;
 import com.educandoweb.course.course.services.ProductService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/category")
-@AllArgsConstructor
+@RequestMapping(value = "/products")
 public class ProductResource {
 
     @Autowired

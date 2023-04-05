@@ -4,7 +4,6 @@ import com.educandoweb.course.course.entities.User;
 import com.educandoweb.course.course.repository.UserRepository;
 import com.educandoweb.course.course.services.exceptions.DatabaseException;
 import com.educandoweb.course.course.services.exceptions.ResourceNotFoundException;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -15,7 +14,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
 public class UserService {
 
     @Autowired

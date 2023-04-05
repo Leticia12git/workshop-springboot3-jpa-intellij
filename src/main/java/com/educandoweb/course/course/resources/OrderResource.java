@@ -2,7 +2,6 @@ package com.educandoweb.course.course.resources;
 
 import com.educandoweb.course.course.entities.Order;
 import com.educandoweb.course.course.services.OrderService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +13,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/orders")
-@AllArgsConstructor
 public class OrderResource {
 
     @Autowired
